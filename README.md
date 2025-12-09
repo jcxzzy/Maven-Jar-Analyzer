@@ -79,7 +79,7 @@ v2版本：
 
 ```python
 # 通过智能体使用
-"请分析com.example.MyClass:org-test-order-client:1.0.0-SNAPSHOT，找到TestOrderClient类并反编译"
+"请分析org.springframework.security.oauth:spring-security-oauth2:2.3.4.RELEASE，找到查找类：AuthorizationServerConfigurerAdapter类并反编译"
 
 ```
 

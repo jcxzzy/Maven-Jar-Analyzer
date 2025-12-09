@@ -423,7 +423,7 @@ def print_class_info(class_info, detailed=False):
             print(f"  ... 还有 {len(class_info['methods']) - 20} 个方法")
 
 
-def verify_mcsp_dependency():
+def verify_spring_security_dependency():
     """验证Spring Security OAuth2依赖"""
     
     print("=" * 80)
@@ -550,4 +550,4 @@ if __name__ == "__main__":
         print("⚠ javatools未安装，将使用基础分析")
         print("安装命令: pip install javatools\n")
     
-    verify_mcsp_dependency()
+    verify_spring_security_dependency()
