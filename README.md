@@ -72,8 +72,9 @@ Maven依赖分析和类反编译的MCP服务，支持远程调用。
 ---
 ## 安装部署
 
-v1版本：
-v2版本：
+**v1版本**：https://github.com/jcxzzy/Maven-Jar-Analyzer/blob/main/v1/README.md
+
+**v2版本**：https://github.com/jcxzzy/Maven-Jar-Analyzer/blob/main/v2/README.md
 
 ## 🎯 使用示例
 
@@ -119,3 +120,8 @@ A: 确保：
 ## 贡献
 
 欢迎提交Issue和Pull Request！
+
+## 最后
+
+⭐ 问题：如何让AI IDE读懂Maven依赖中的类？
+答案：**Star这个项目！**
