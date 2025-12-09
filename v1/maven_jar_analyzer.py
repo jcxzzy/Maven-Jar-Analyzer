@@ -424,27 +424,27 @@ def print_class_info(class_info, detailed=False):
 
 
 def verify_mcsp_dependency():
-    """验证MCSP依赖分析"""
+    """验证Spring Security OAuth2依赖"""
     
     print("=" * 80)
-    print("Maven Jar Analyzer - MCSP依赖验证")
+    print("Maven Jar Analyzer - Spring Security OAuth2依赖验证")
     print("=" * 80)
     
     # 定义要下载的依赖
     dependencies = [
         {
-            'groupId': 'com.midea.mcsp',
-            'artifactId': 'mcsp-pots-order-client',
-            'version': '2.1.6-SNAPSHOT'
+            'groupId': 'org.springframework.security.oauth',
+            'artifactId': 'spring-security-oauth2',
+            'version': '2.3.4.RELEASE'
         }
     ]
     
     # 定义要查找的类
     target_classes = [
-        'RtoQueryMssClient',
-        'RetrieveRtoListForMssQuery',
-        'RetrieveRtoListForMssResp',
-        'RtoCompletedEvent'
+        'AuthorizationServerConfigurerAdapter',
+        'ResourceServerConfigurerAdapter',
+        'OAuth2Authentication',
+        'ClientDetailsService'
     ]
     
     # 创建分析器
@@ -461,17 +461,8 @@ def verify_mcsp_dependency():
         print("步骤1: 创建pom.xml")
         print("-" * 80)
         
-        # 如果是SNAPSHOT版本，可能需要配置仓库
-        repositories = [
-            {
-                'id': 'midea-snapshots',
-                'name': 'Midea Snapshot Repository',
-                'url': 'https://your-maven-repo/snapshots',  # 需要替换为实际仓库地址
-                'snapshots': 'true'
-            }
-        ]
-        
-        pom_path = analyzer.create_temp_pom(dependencies, work_dir, repositories)
+        # Spring Security OAuth2使用标准公共仓库，无需特殊配置
+        pom_path = analyzer.create_temp_pom(dependencies, work_dir)
         print(f"✓ pom.xml创建成功: {pom_path}")
         
         # 显示pom内容
